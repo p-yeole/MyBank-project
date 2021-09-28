@@ -15,7 +15,7 @@
     include "dbconnection.php";
     $conn = OpenCon();
     //$query2 = "update customer_table set balance = (balance + $amount) where name = 'Pratik' AND set balance = (balance - $amount) where name = '$username'; "   
-    $query2 = "update customer_table set balance = (balance + $amount) where name = 'Pratik' AND set balance = (balance - $amount) where name = '. mysqli_escape_string($conn,$username) . '; ";
+    $query2 = "update customer_table set balance = (balance + $amount) where name = 'Pratik' AND set balance = (balance - $amount) where name = '. mysqli_escape_string($conn,$username) .'";
     $result = mysqli_query($conn,$query2) ;
     $row2 = mysqli_fetch_assoc($result);
     echo $row2["balance"];
